@@ -79,6 +79,11 @@ function App() {
   };
 
   useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.setAttribute('webkit-playsinline', 'true');
+      videoRef.current.setAttribute('playsinline', 'true');
+    }
+
     const handleFullscreenChange = () => {
       const isFullScreen = document.fullscreenElement === videoRef.current;
       setConfig((prev) => ({ ...prev, maximize: isFullScreen }));
@@ -121,7 +126,10 @@ function App() {
       <div className="flex flex-col items-center gap-4">
         <video
           ref={videoRef}
-          className="max-h-[60svh]"
+          autoPlay
+          className="max-h-[55svh]"
+          playsinline
+          webkit-playsinline
           src={require("./assets/路上野花.mp4")}
         />
         <div className="w-full flex flex-wrap items-center justify-center gap-x-4 gap-y-2">
