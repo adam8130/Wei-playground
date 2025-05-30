@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Wei-playground/static/css/main.137c0d81.css",
-    "main.js": "/Wei-playground/static/js/main.04fd524e.js",
+    "main.js": "/Wei-playground/static/js/main.ed1dc1df.js",
     "static/js/453.1df0cb95.chunk.js": "/Wei-playground/static/js/453.1df0cb95.chunk.js",
     "static/media/路上野花.mp4": "/Wei-playground/static/media/路上野花.08a4166decab2ac07ee9.mp4",
     "static/media/Marcin coverd by Wei.mov": "/Wei-playground/static/media/Marcin coverd by Wei.34609060b7409d3cc6b2.mov",
@@ -9,11 +9,11 @@
     "static/media/Wei Drift.mp4": "/Wei-playground/static/media/Wei Drift.0bb053c25e0f2c4f28b8.mp4",
     "index.html": "/Wei-playground/index.html",
     "main.137c0d81.css.map": "/Wei-playground/static/css/main.137c0d81.css.map",
-    "main.04fd524e.js.map": "/Wei-playground/static/js/main.04fd524e.js.map",
+    "main.ed1dc1df.js.map": "/Wei-playground/static/js/main.ed1dc1df.js.map",
     "453.1df0cb95.chunk.js.map": "/Wei-playground/static/js/453.1df0cb95.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.137c0d81.css",
-    "static/js/main.04fd524e.js"
+    "static/js/main.ed1dc1df.js"
   ]
 }
