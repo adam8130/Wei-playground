@@ -1,9 +1,10 @@
 {
   "files": {
-    "main.css": "/Wei-playground/static/css/main.137c0d81.css",
-    "main.js": "/Wei-playground/static/js/main.0d210e9c.js",
+    "main.css": "/Wei-playground/static/css/main.60992a13.css",
+    "main.js": "/Wei-playground/static/js/main.3a327cd1.js",
     "static/js/453.1df0cb95.chunk.js": "/Wei-playground/static/js/453.1df0cb95.chunk.js",
     "static/media/夠愛.mp4": "/Wei-playground/static/media/夠愛.b6b6406da6851996df79.mp4",
+    "static/media/結界師 -Take over destiny.mov": "/Wei-playground/static/media/結界師 -Take over destiny.856330252444d2122a02.mov",
     "static/media/路上野花.mp4": "/Wei-playground/static/media/路上野花.08a4166decab2ac07ee9.mp4",
     "static/media/一路向北.mp4": "/Wei-playground/static/media/一路向北.6a1776f591c4e8af317b.mp4",
     "static/media/Pure evil.mp4": "/Wei-playground/static/media/Pure evil.a9dd66c46d16e49eefd1.mp4",
@@ -12,12 +13,12 @@
     "static/media/To be continued.mp4": "/Wei-playground/static/media/To be continued.2d08d6cadf10c18e30e6.mp4",
     "static/media/Wei Drift.mp4": "/Wei-playground/static/media/Wei Drift.0bb053c25e0f2c4f28b8.mp4",
     "index.html": "/Wei-playground/index.html",
-    "main.137c0d81.css.map": "/Wei-playground/static/css/main.137c0d81.css.map",
-    "main.0d210e9c.js.map": "/Wei-playground/static/js/main.0d210e9c.js.map",
+    "main.60992a13.css.map": "/Wei-playground/static/css/main.60992a13.css.map",
+    "main.3a327cd1.js.map": "/Wei-playground/static/js/main.3a327cd1.js.map",
     "453.1df0cb95.chunk.js.map": "/Wei-playground/static/js/453.1df0cb95.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.137c0d81.css",
-    "static/js/main.0d210e9c.js"
+    "static/css/main.60992a13.css",
+    "static/js/main.3a327cd1.js"
   ]
 }
