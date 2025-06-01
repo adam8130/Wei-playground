@@ -1,19 +1,21 @@
 {
   "files": {
     "main.css": "/Wei-playground/static/css/main.137c0d81.css",
-    "main.js": "/Wei-playground/static/js/main.ed1dc1df.js",
+    "main.js": "/Wei-playground/static/js/main.b729fc52.js",
     "static/js/453.1df0cb95.chunk.js": "/Wei-playground/static/js/453.1df0cb95.chunk.js",
     "static/media/路上野花.mp4": "/Wei-playground/static/media/路上野花.08a4166decab2ac07ee9.mp4",
+    "static/media/一路向北.mp4": "/Wei-playground/static/media/一路向北.6a1776f591c4e8af317b.mp4",
     "static/media/Marcin coverd by Wei.mov": "/Wei-playground/static/media/Marcin coverd by Wei.34609060b7409d3cc6b2.mov",
+    "static/media/No name.mp4": "/Wei-playground/static/media/No name.d91a158d88b12a5f5f51.mp4",
     "static/media/To be continued.mp4": "/Wei-playground/static/media/To be continued.2d08d6cadf10c18e30e6.mp4",
     "static/media/Wei Drift.mp4": "/Wei-playground/static/media/Wei Drift.0bb053c25e0f2c4f28b8.mp4",
     "index.html": "/Wei-playground/index.html",
     "main.137c0d81.css.map": "/Wei-playground/static/css/main.137c0d81.css.map",
-    "main.ed1dc1df.js.map": "/Wei-playground/static/js/main.ed1dc1df.js.map",
+    "main.b729fc52.js.map": "/Wei-playground/static/js/main.b729fc52.js.map",
     "453.1df0cb95.chunk.js.map": "/Wei-playground/static/js/453.1df0cb95.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.137c0d81.css",
-    "static/js/main.ed1dc1df.js"
+    "static/js/main.b729fc52.js"
   ]
 }
