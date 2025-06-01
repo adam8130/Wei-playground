@@ -5,11 +5,15 @@ const playlist = [
   { name: "路上野花", file: "路上野花.mp4" },
   { name: "To be continued", file: "To be continued.mp4" },
   { name: "Marcin coverd by Wei", file: "Marcin coverd by Wei.mov" },
+  { name: "一路向北.mp4", file: "一路向北.mp4" },
+  { name: "夠愛.mp4", file: "夠愛.mp4" },
+  { name: "No name.mp4", file: "No name.mp4" },
   { name: "Wei Drift", file: "Wei Drift.mp4" },
 ];
 
 function App() {
   const videoRef = useRef(null);
+  const searchMenuRef = useRef(null);
 
   const [progress, setProgress] = useState(0);
   const [volume, setVolume] = useState(1);
@@ -79,20 +83,45 @@ function App() {
   };
 
   useEffect(() => {
-    if (videoRef.current) {
-      videoRef.current.setAttribute('webkit-playsinline', 'true');
-      videoRef.current.setAttribute('playsinline', 'true');
+    const video = videoRef.current;
+
+    if (video) {
+      video.setAttribute('webkit-playsinline', 'true');
+      video.setAttribute('playsinline', 'true');
     }
 
     const handleFullscreenChange = () => {
-      const isFullScreen = document.fullscreenElement === videoRef.current;
+      const isFullScreen = document.fullscreenElement === video;
       setConfig((prev) => ({ ...prev, maximize: isFullScreen }));
     };
 
+    const handleTimeUpdate = () => {
+      const percent = (video.currentTime / video.duration) * 100;
+      setProgress(isNaN(percent) ? 0 : percent);
+    };
+
     document.addEventListener("fullscreenchange", handleFullscreenChange);
+    video.addEventListener("timeupdate", handleTimeUpdate);
 
     return () => {
       document.removeEventListener("fullscreenchange", handleFullscreenChange);
+      video.removeEventListener("timeupdate", handleTimeUpdate);
+    };
+  }, []);
+
+  useEffect(() => {
+    function handleClickOutside(e) {
+      if (
+        searchMenuRef.current &&
+        !searchMenuRef.current.contains(e.target)
+      ) {
+        setIsSearchMenuOpen(false);
+      }
+    }
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
     };
   }, []);
 
@@ -109,7 +138,7 @@ function App() {
           onClick={() => setIsSearchMenuOpen(true)}
         />
         {isSearchMenuOpen && (
-          <div className="w-[80%] max-w-[400px] absolute top-[35px] flex flex-col gap-2 bg-[#252738] p-4 rounded-md z-[100]">
+          <div ref={searchMenuRef} className="w-[80%] max-w-[400px] absolute top-[35px] flex flex-col gap-2 bg-[#252738] p-4 rounded-md z-[100]">
             {playlist.map((item, index) => (
               <div
                 key={index}
