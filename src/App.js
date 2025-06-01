@@ -7,6 +7,10 @@ const playlist = [
   { name: "Marcin coverd by Wei", file: "Marcin coverd by Wei.mov" },
   { name: "一路向北.mp4", file: "一路向北.mp4" },
   { name: "夠愛.mp4", file: "夠愛.mp4" },
+  { name: "結界師 -Take over destiny.mov", file: "結界師 -Take over destiny.mov" },
+  { name: "Pure evil.mp4", file: "Pure evil.mp4" },
+  { name: "WEI 國二冠軍影片 Solo.mp4", file: "WEI 國二冠軍影片 Solo.mp4" },
+  { name: "WEI 國二冠軍影片.mp4", file: "WEI 國二冠軍影片.mp4" },
   { name: "No name.mp4", file: "No name.mp4" },
   { name: "Wei Drift", file: "Wei Drift.mp4" },
 ];
@@ -15,6 +19,7 @@ function App() {
   const videoRef = useRef(null);
   const searchMenuRef = useRef(null);
 
+  const [isVideoLoading, setIsVideoLoading] = useState(true);
   const [progress, setProgress] = useState(0);
   const [volume, setVolume] = useState(1);
   const [isSearchMenuOpen, setIsSearchMenuOpen] = useState(false);
@@ -22,6 +27,7 @@ function App() {
     play: false,
     loop: false,
     maximize: false,
+    currentPlaying: '路上野花',
   });
 
   const handlePlayClick = () => {
@@ -56,12 +62,13 @@ function App() {
 
   const handleChangeSong = (item) => {
     if (videoRef.current) {
-      videoRef.current.src = require(`./assets/${item}`);
+      videoRef.current.src = require(`./assets/${item.file}`);
       videoRef.current.play();
-      setConfig({ play: true, loop: false, maximize: false });
+      setConfig({ play: true, loop: false, currentPlaying: item.name, maximize: false });
     }
 
     setIsSearchMenuOpen(false);
+    setIsVideoLoading(true)
   };
 
   const handleProgressChange = (e) => {
@@ -100,12 +107,20 @@ function App() {
       setProgress(isNaN(percent) ? 0 : percent);
     };
 
+    const handleLoaded = () => {
+      setIsVideoLoading(false)
+    }
+
+  
+  
     document.addEventListener("fullscreenchange", handleFullscreenChange);
     video.addEventListener("timeupdate", handleTimeUpdate);
+    video.addEventListener("canplay", handleLoaded);
 
     return () => {
       document.removeEventListener("fullscreenchange", handleFullscreenChange);
       video.removeEventListener("timeupdate", handleTimeUpdate);
+      video.removeEventListener("canplay", handleLoaded);
     };
   }, []);
 
@@ -126,7 +141,7 @@ function App() {
   }, []);
 
   return (
-    <div className="w-screen h-[100svh] flex flex-col gap-y-[24px] justify-center items-center bg-[#1A1C2B] p-8">
+    <div className="w-screen h-[100svh] flex flex-col gap-y-[20px] justify-center items-center bg-[#1A1C2B] p-8">
       <h1 className="text-[#B9BFF5] font-[800] text-[26px]">
         Select a song u like 😘
       </h1>
@@ -143,7 +158,7 @@ function App() {
               <div
                 key={index}
                 className="text-[#B9BFF5] text-[16px] cursor-pointer hover:text-[#FF36C9] transition-colors duration-300"
-                onClick={() => handleChangeSong(item.file)}
+                onClick={() => handleChangeSong(item)}
               >
                 {item.name}
               </div>
@@ -152,13 +167,19 @@ function App() {
         )}
       </div>
 
-      <div className="flex flex-col items-center gap-4">
+      <span className="text-[20px] text-[#B9BFF5]">{config.currentPlaying}</span>
+
+      <div className="flex flex-col items-center gap-4 relative">
+        {isVideoLoading && (
+          <div className="absolute w-full h-[45svh] flex justify-center items-center bg-[#252738] p-3">
+            <span className="text-[24px] text-white animate-pulse">Loading...</span>
+          </div>
+        )}
         <video
           ref={videoRef}
           autoPlay
-          className="max-h-[55svh]"
-          playsinline
-          webkit-playsinline
+          className="max-h-[52svh]"
+
           src={require("./assets/路上野花.mp4")}
         />
         <div className="w-full flex flex-wrap items-center justify-center gap-x-4 gap-y-2">
