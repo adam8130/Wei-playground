@@ -171,8 +171,8 @@ function App() {
 
       <div className="flex flex-col items-center gap-4 relative">
         {isVideoLoading && (
-          <div className="absolute w-full h-[45svh] flex justify-center items-center bg-[#252738] p-3">
-            <span className="text-[24px] text-white animate-pulse">Loading...</span>
+          <div className="absolute w-[140%] h-[45svh] flex justify-center items-center bg-[#252738] p-3">
+            <span className="text-[18px] text-white animate-pulse">Loading...</span>
           </div>
         )}
         <video
