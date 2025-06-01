@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Wei-playground/static/css/main.a1256228.css",
-    "main.js": "/Wei-playground/static/js/main.6b52d010.js",
+    "main.css": "/Wei-playground/static/css/main.daa91852.css",
+    "main.js": "/Wei-playground/static/js/main.29d9182b.js",
     "static/js/453.1df0cb95.chunk.js": "/Wei-playground/static/js/453.1df0cb95.chunk.js",
     "static/media/夠愛.mp4": "/Wei-playground/static/media/夠愛.b6b6406da6851996df79.mp4",
     "static/media/WEI 國二冠軍影片.mp4": "/Wei-playground/static/media/WEI 國二冠軍影片.cdd006a4043a6bfe4588.mp4",
@@ -15,12 +15,12 @@
     "static/media/To be continued.mp4": "/Wei-playground/static/media/To be continued.2d08d6cadf10c18e30e6.mp4",
     "static/media/Wei Drift.mp4": "/Wei-playground/static/media/Wei Drift.0bb053c25e0f2c4f28b8.mp4",
     "index.html": "/Wei-playground/index.html",
-    "main.a1256228.css.map": "/Wei-playground/static/css/main.a1256228.css.map",
-    "main.6b52d010.js.map": "/Wei-playground/static/js/main.6b52d010.js.map",
+    "main.daa91852.css.map": "/Wei-playground/static/css/main.daa91852.css.map",
+    "main.29d9182b.js.map": "/Wei-playground/static/js/main.29d9182b.js.map",
     "453.1df0cb95.chunk.js.map": "/Wei-playground/static/js/453.1df0cb95.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a1256228.css",
-    "static/js/main.6b52d010.js"
+    "static/css/main.daa91852.css",
+    "static/js/main.29d9182b.js"
   ]
 }
