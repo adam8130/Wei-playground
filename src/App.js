@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react";
 const playlist = [
   { name: "路上野花", file: "路上野花.mp4" },
   { name: "無賴正義", file: "無賴正義.mp4" },
+  { name: "周湯豪-你說的都對", file: "周湯豪-你說的都對.mp4" },
   { name: "To be continued", file: "To be continued.mp4" },
   { name: "Marcin coverd by Wei", file: "Marcin coverd by Wei.mov" },
   { name: "一路向北", file: "一路向北.mp4" },
