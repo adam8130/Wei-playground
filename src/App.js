@@ -16,6 +16,8 @@ const playlist = [
   { name: "WEI 無賴正義", file: "WEI 無賴正義.mov" },
   { name: "No name", file: "No name.mp4" },
   { name: "Wei drift", file: "Wei drift.mp4" },
+  { name: "Wei-love ver.guitar", file: "Wei-love ver.guitar.mp4" },
+  { name: "Wei-love", file: "Wei-love.mp4" },
 ];
 
 export default function App() {
